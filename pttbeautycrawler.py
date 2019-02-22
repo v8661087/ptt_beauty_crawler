@@ -1,11 +1,9 @@
 import os
 import requests
 from bs4 import BeautifulSoup
-import concurrent.futures
-
 
 push_rate = 90 #調整大於的推數
-url = "https://www.ptt.cc/bbs/Beauty/search?page=1&q=%E5%A4%A7%E5%AD%B8" #網址
+url = "https://www.ptt.cc/bbs/Beauty/index.html" #網址
 for i in range(10):  #頁數
     res = requests.get(url)
     soup = BeautifulSoup(res.text,"html.parser")
